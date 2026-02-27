@@ -1,4 +1,3 @@
-package InHinhDG;
 public class InHinhDG {
     public static void main(String[] args) {
         System.out.println("   *   ");
