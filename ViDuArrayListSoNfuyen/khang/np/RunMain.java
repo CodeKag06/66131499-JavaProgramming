@@ -37,5 +37,11 @@ public class RunMain {
 			if (x % 2 == 0) soLuongPTchan++;
 		}
 		System.out.println("có " + soLuongPTchan + " số chẵn trong danh sách");
+		// d. Tính tổng cách phần tử: Thuật toán cộng dồn
+		int TongAll = 0;
+		for (Integer x: dsSoNguyen) {
+			TongAll += x;
+		}
+		System.out.print("tổng các phần tử có trong danh sách là: " + TongAll);
 	}
 }
