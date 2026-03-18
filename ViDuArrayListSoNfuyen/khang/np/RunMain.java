@@ -26,9 +26,16 @@ public class RunMain {
 			Integer tam = dsSoNguyen.get(i);
 			System.out.print(tam + " ");
 		}
+		System.out.print("\n");
 //		for (Integer x: dsSoNguyen) {
 //			System.out.print(x + " ");
 //		}
 		 
+		//c. Đếm số phân tử chẵn
+		int soLuongPTchan = 0;
+		for (Integer x : dsSoNguyen) {
+			if (x % 2 == 0) soLuongPTchan++;
+		}
+		System.out.println("có " + soLuongPTchan + " số chẵn trong danh sách");
 	}
 }
