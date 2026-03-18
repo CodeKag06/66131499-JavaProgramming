@@ -13,11 +13,22 @@ public class RunMain {
 		for(int i=0; i<10; i++) {
 		// Nhập 1 phân tử
 		    // In ra một hướng dẫn cho người dùng
-		System.out.print("mời nhập phần tử thứ" + i + ":" );
+		System.out.print("mời nhập phần tử thứ " + i + ":" );
 			// Cho User cất vào biến tạm
 		Integer tam = banPhim.nextInt();
 			// thêm vao cuối danh sách
 		dsSoNguyen.add(tam);
 		}
+		// b. In ra màng hình danh sách vừa nhập
+		System.out.println("Danh sách vừa nhập là: ");
+		for (int i=0; i<dsSoNguyen.size(); i++) {
+			// Lấy giá trị phân tử ở vị trí i, cất vào biến tạm
+			Integer tam = dsSoNguyen.get(i);
+			System.out.print(tam + " ");
+		}
+//		for (Integer x: dsSoNguyen) {
+//			System.out.print(x + " ");
+//		}
+		 
 	}
 }
