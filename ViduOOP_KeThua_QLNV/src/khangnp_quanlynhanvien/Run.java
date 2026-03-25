@@ -3,8 +3,12 @@ package khangnp_quanlynhanvien;
 public class Run {
 	public static void main (String[] args) {
 		// test lop nhan vien 
-		NhanVien nv1 = new NhanVien("001", "Nguyen Phuc Khang", 151515);
-		nv1.hienThiThongTin();
-		System.out.print(nv1.toString());
+		NhanVien nv1 = new NhanVien("001", "Nguyen Phuc Khang", 2300000);
+//		nv1.hienThiThongTin();
+		System.out.println(nv1.toString());
+		
+		NhanVienVanPhong nvVanPhong1 = new NhanVienVanPhong("002","Trần Thị Tươi Thắm", 2300000, 3, 200000);
+		System.out.println(nvVanPhong1.toString());
+//		nvVanPhong1.hienThiThongTin();
 	}
 }
