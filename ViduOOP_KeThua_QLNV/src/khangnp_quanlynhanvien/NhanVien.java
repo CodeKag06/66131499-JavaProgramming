@@ -2,7 +2,7 @@ package khangnp_quanlynhanvien;
 
 public class NhanVien {
 	// Thuộc tính
-	private String maNv;
+	private String maNV;
 	private String hoTen;
 	private double luongCoBan;
 	//Hàm tạo
@@ -10,17 +10,21 @@ public class NhanVien {
 	
 	}
 	public NhanVien(String maNhanVien, String tenNhanVien, double luongCoBan) {
-		this.maNv = maNhanVien;
+		this.maNV = maNhanVien;
 		this.hoTen = tenNhanVien;
 		this.luongCoBan = luongCoBan;
-		
+	}
 		//Các phương thức
-		public double tinhLuong() {
+		public double luongCoBan() {
 			return luongCoBan;
 		}
-	}
 	@Override
 	public String toString() {
-		return "NhanVien [maNv=" + maNv + ", hoTen=" + hoTen + ", luongCoBan=" + luongCoBan + "]";
+		return "NhanVien [maNv=" + maNV + ", hoTen=" + hoTen + ", luongCoBan=" + luongCoBan + "]";
+	}
+	public void hienThiThongTin() {
+		System.out.println("Mã NV: " + maNV);
+		System.out.println("Họ tên: " + hoTen);
+		System.out.println("Lương cơ bản: " + luongCoBan);
 	}
 }
