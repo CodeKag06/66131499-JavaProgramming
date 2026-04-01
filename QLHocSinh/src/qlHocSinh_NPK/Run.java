@@ -57,7 +57,7 @@ public class Run {
 		//Nhap danh sach N hoc sinh
 		ArrayList<HocSinh> dsHocSinh = new ArrayList<HocSinh>();
 		//Nhap N
-		System.out.print("\nnhap so luong N hoc sinh: ");
+		System.out.print("\nnhap so luong N hoc sinh trong danh sach: ");
 		int N = banPhim.nextInt(); // nhap N tu ban phim
 		
 		banPhim.nextLine();
@@ -68,26 +68,67 @@ public class Run {
 			 // Hoi User nhap vao ten
 			System.out.print("Moi nhap ten hoc sinh thu " + i + " :");// in ra huong da va doi
 			String tenHSi = banPhim.nextLine();
-			//>> goi vao bien hs3
+			//>> goi vao bien hsi
 			hsi.setTenHS(tenHSi);
 			
 			System.out.print("Moi nhap tuoi hoc sinh thu " + i + " :");// in ra huong da va doi
 			Short tuoiHSi = banPhim.nextShort();
-			//>> goi vao bien hs3
+			//>> goi vao bien hsi
 			hsi.setTuoiHS(tuoiHSi);
 			
 			banPhim.nextLine();
 			
 			System.out.print("Moi nhap lop hoc sinh thu " + i + " :");// in ra huong da va doi
 			String lopHSi = banPhim.nextLine();
-			//>> goi vao bien hs3
+			//>> goi vao bien hsi
 			hsi.setLopHS(lopHSi);
 			
 			//Dua vao danh sach
 			dsHocSinh.add(hsi);
 		}
 		//In ra
-		for (int i=0; i<N; i++) {
+		for (int i=0; i<dsHocSinh.size(); i++) {
+			System.out.println(dsHocSinh.get(i).toString());
+		}
+		
+		//4a================
+		// Bổ sung thêm
+		HocSinh hsThem = new HocSinh();
+		 // Hoi User nhap vao ten
+		System.out.print("\nMoi nhap ten hoc sinh them: ");// in ra huong da va doi
+		String tenHSThem = banPhim.nextLine();
+		//>> goi vao bien hsThem
+		hsThem.setTenHS(tenHSThem);
+		
+		System.out.print("Moi nhap tuoi hoc sinh them: ");// in ra huong da va doi
+		Short tuoiHSThem = banPhim.nextShort();
+		//>> goi vao bien hsThem
+		hsThem.setTuoiHS(tuoiHSThem);
+		
+		banPhim.nextLine();
+		
+		System.out.print("Moi nhap lop hoc sinh them: ");// in ra huong da va doi
+		String lopHSThem = banPhim.nextLine();
+		//>> goi vao bien hsThem
+		hsThem.setLopHS(lopHSThem);
+		
+		//them vao ds
+		dsHocSinh.add(hsThem);
+		//Xuat ra
+		for (int i=0; i<dsHocSinh.size(); i++) {
+			System.out.println(dsHocSinh.get(i).toString());
+		}
+		
+		//5a.
+		//Tim hoc sinh ten Hoa dau tien trong danh sach
+		for(int i=0;i<dsHocSinh.size();i++) {
+			HocSinh hsTim = dsHocSinh.get(i);
+			if (hsTim.getTenHS().equals("Hoa")) {
+				dsHocSinh.remove(hsTim);
+				break;
+			}
+		}
+		for (int i=0; i<dsHocSinh.size(); i++) {
 			System.out.println(dsHocSinh.get(i).toString());
 		}
 	}
