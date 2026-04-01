@@ -41,9 +41,10 @@ public class HocSinh {
 	@Override
 	public String toString() {
 		String chuoiXuat;
-		chuoiXuat = "\nHo va ten: " + tenHS;
+		chuoiXuat = "Ho va ten: " + tenHS;
 		chuoiXuat = chuoiXuat + "\nTuoi HS: " + tuoiHS;
 		chuoiXuat = chuoiXuat + "\nLop HS: " + lopHS;
+		chuoiXuat = chuoiXuat + "\n";
 		return chuoiXuat;
 //		return "HocSinh [tenHS=" + tenHS + ", tuoiHS=" + tuoiHS + ", lopHS=" + lopHS + "]";
 	}
